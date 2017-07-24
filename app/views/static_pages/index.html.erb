@@ -21,10 +21,12 @@
       var textBox = $('.new-todo');
       var payload = {
         task: {
-          title: textbox.val()
+          title: textBox.val()
         }
       };
-      console.log(payload);
+      $.post("/tasks", payload).success(function(data) {
+        console.log("Successful HTTP Request");
+      });
     });
 
        // The taskHtml method takes in a JavaScript representation
