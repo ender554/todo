@@ -19,7 +19,12 @@
     $('#new-form').submit(function(event) {
       event.preventDefault();
       var textBox = $('.new-todo');
-      console.log("Task: ", textBox.val());
+      var payload = {
+        task: {
+          title: textbox.val()
+        }
+      };
+      console.log(payload);
     });
 
        // The taskHtml method takes in a JavaScript representation
